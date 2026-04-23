@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huang Wei & Lê Hằng</title>
+
+  <meta property="og:title" content="Huang Wei & Lê Hằng" />
+  <meta property="og:description" content="14.04.2026" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:image" content="https://i.postimg.cc/50j21hMt/IMG-5494.jpg" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="400" />
+
+  <link rel="stylesheet" href="dist/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css" />
+</head>
+
+<body>
+  <div class="letter-section">
+    <div class="content" id="open-card">
+      <!-- <div class="logo">
+        <img src="assets/images/white_logo.png" class="logo-img" alt="">
+      </div>
+      <div class="names">
+        <div class="name wife">Huyền My</div>
+        <div class="ampersand">
+          &
+        </div>
+        <div class="name husband">Quang Huy</div>
+      </div> -->
+      <!-- <div class="divider">
+        <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/huy-my/22919681892219408023.jpg" class="divider-img" alt="" />
+      </div> -->
+      <div class="flap-shadow"></div>
+      <div class="seal-shadow"></div>
+      <img src="assets/images/nap.png" class="flap" alt="">
+      <div class="welcome">
+        Dành cho bạn, vị khách <br>
+        đặc biệt của chúng tôi
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section class="hero">
+      <div class="content" data-animate="fade-in">
+        <div class="top-img">
+          <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9654.webp" data-animate="fade-up" alt="Logo" />
+        </div>
+        <div class="title" id="ngaychungdoi">Ngày chung đôi</div>
+        
+        <div class="names">
+          <div class="wife-name" data-animate="fade-in" data-animate-delay="0.5">Huang Wei</div>
+          <div class="divider" data-animate="fade-in" data-animate-delay="0.8">&</div>
+          <div class="husband-name" data-animate="fade-in" data-animate-delay="1">Lê Hằng</div>
+        </div>
+        <div class="welcome" data-animate="fade-in">
+          <p>
+            Chúng tôi chọn năm 2026 <br>
+            để bắt đầu một chương mới.
+          </p>
+          <p>
+            Sau những năm tháng trưởng thành cùng nhau, <br>
+            chúng tôi mong được chia sẻ khoảnh khắc này <br>
+            với những người quan trọng nhất trong cuộc đời mình.
+          </p>
+          <p>
+            Sự hiện diện của bạn <br>
+            là điều làm nên ý nghĩa của ngày hôm ấy.
+          </p>
+        </div>
+
+        <div class="banquet_table">
+          <img src="assets/images/banquet_table.png" data-animate="fade-in" alt="">
+        </div>
+        <div class="note" data-animate="fade-in">
+          Đừng quên xác nhận <br>
+          tham gia cùng chúng tôi nhé!
+        </div>
+        <div class="downward_arrow" data-animate="fade-down">
+          <img src="assets/images/downward_arrow.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown">
+      <div class="content" data-animate="fade-in">
+        <div class="title" data-animate="fade-in">Cùng đếm ngược nhé...</div>
+        <div class="sub_text" data-animate="fade-in">Cho ngày hạnh phúc nhất đời chúng tôi!</div>
+        <div class="countdown-box" data-animate="fade-in">
+          <div class="time-box">
+            <div class="number" id="days">00</div>
+            <div class="label">Days</div>
+          </div>
+          <div class="time-box">
+            <div class="number" id="hours">00</div>
+            <div class="label">Hours</div>
+          </div>
+          <div class="time-box">
+            <div class="number" id="mins">00</div>
+            <div class="label">Minute</div>
+          </div>
+          <div class="time-box">
+            <div class="number" id="secs">00</div>
+            <div class="label">Second</div>
+          </div>
+        </div>
+        <div class="invite_text" data-animate="fade-in">
+          <p id="invite_countdown_text_1">Đến cùng lời chúc phúc và </p>
+          <p id="invite_countdown_text_2">ở lại cùng chia sẻ niềm vui!</p>
+        </div>
+        <div class="cake_img" data-animate="fade-in">
+          <img src="assets/images/cake.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="invite">
+      <div class="content" data-animate="fade-in">
+        <div class="title" data-animate="fade-in">Lịch trình ngày chung đôi</div>
+        <div class="sub_text" data-animate="fade-in">
+          Thông tin chi tiết gửi riêng đến bạn
+        </div>
+        <div class="divider-time">
+          <img src="assets/images/clock.png" data-animate="flip-vertical-left" alt="">
+        </div>
+        <div class="time_label" data-animate="fade-in">Thời gian</div>
+        <div class="time" data-animate="fade-in"><strong id="hours-bold">18:00</strong> | Thứ 4, ngày 27.05.2026</div>
+        <div class="divider">
+          <img src="assets/images/divider_heart.png" data-animate="flip-vertical-left" alt="">
+        </div>
+        <div class="location_label" data-animate="fade-in">Địa điểm</div>
+        <div class="name" data-animate="fade-in">
+          Nhà hàng Côn Sơn
+        </div>
+        <div class="address">80-84 Trần Quốc Thảo, Võ Thị Sáu, Xuân Hòa, Hồ Chí Minh 700000</div>
+        <div class="map_btn" data-animate="fade-in">
+          <a target="_blank" href="https://maps.app.goo.gl/3Xm9Zx4DyCKB36gT8" alt=""></a>
+        </div>
+        <div class="map_art">
+          <img src="assets/images/map_art.png" data-animate="fade-in" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="dresscode">
+      <div class="content" data-animate="fade-in">
+        <!-- <div class="logo">
+          <img src="assets/images/logo.png" data-animate="flip-vertical-left" alt="" />
+        </div> -->
+        <h2 data-animate="fade-in">Dresscode</h2>
+        <div class="subtext" data-animate="fade-in">
+          <p class="hide-v2">Dresscode Vows: <span class="bold">Áo dài</span></p>
+          <p>Dresscode Ceremony: <span class="bold">Trang phục tự do</span></p>
+        </div>
+        <div class="colors-grid">
+          <div class="item color-box">
+            <div class="color">
+              <div class="circle color1" style="background-color: #ffff;"></div>
+            </div>
+            <!-- <div class="label">Trắng</div> -->
+          </div>
+          <div class="item color-box">
+            <div class="color">
+              <div class="circle color2" style="background-color: #F7D9BC;"></div>
+            </div>
+          </div>
+          <div class="item color-box">
+            <div class="color">
+              <div class="circle color3" style="background-color: #000;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <div class="content timeline-content" data-animate="fade-in">
+        <h1 class="title timeline-title" data-animate="fade-in">Lịch trình ngày chung đôi</h1>
+        <div class="subtext">Những bất ngờ chúng tôi dành cho bạn</div>
+        <div class="items">
+          <div class="item timeline-item">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/gate.png" alt="" />
+            </div>
+            <div class="time"><span class="strong" id="welcome-time">18:00</span>&nbsp;| Đón khách</div>
+          </div>
+
+          <div class="item timeline-item hide-v2">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/coktail.png" alt="" />
+            </div>
+            <div class="time"><span class="strong">18:30</span>&nbsp;| Tiệc cocktail</div>
+          </div>
+
+          <!-- <div class="item timeline-item hide-v2">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/rings.png" alt="" />
+            </div>
+            <div class="time"><span class="strong">16:30</span>&nbsp;| Lễ thề nguyện</div>
+          </div> -->
+          
+          <div class="item timeline-item">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/cake_gato.png" alt="" />
+            </div>
+            <div class="time"><span class="strong">19:00</span>&nbsp;| Lễ cưới</div>
+          </div>
+          <div class="item timeline-item">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/dinner.png" alt="" />
+            </div>
+            <div class="time"><span class="strong">19:30</span>&nbsp;| Tiệc tối</div>
+          </div>
+          <div class="item timeline-item">
+            <div class="icon">
+              <img class="icon-animate" src="assets/images/icons/games.png" alt="" />
+            </div>
+            <div class="time"><span class="strong">20:15</span>&nbsp;| Game</div>
+          </div>
+        </div>
+        <div class="box-img">
+          <img src="assets/images/wine.png" data-animate="fade-in" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="album">
+      <div class="content" data-animate="fade-in">
+        <h2 class="titile" data-animate="fade-in">Album photo</h2>
+        <div class="swiper main-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9648.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9933.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9580.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9673.webp" style="object-position: 78% 50%;" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp">
+      <div class="content" data-animate="fade-in">
+        <h2 class="title" data-animate="fade-in">Xác nhận tham dự</h2>
+        <div class="subtext" data-animate="fade-in">Mong được đón bạn trong ngày vui của chúng tôi</div>
+        <form id="rsvpForm" class="rsvp-form">
+          <div class="header">
+            <p class="subtext" data-animate="fade-in">
+              Khách mời vui lòng xác nhận tham dự <br> 
+              <strong>trước ngày 20/03/2026</strong> để chúng tôi có thể  <br>chuẩn bị chu đáo nhất.
+            </p> 
+          </div>
+          <!-- <div class="form-group guest-number fade-right">
+            <label>
+              NUMBER OF ATTENDANCE
+              <span class="subtitle">/SỐ NGƯỜI ĐI CÙNG/</span>
+            </label>
+            <input type="text" id="attendance" name="attendance" placeholder="">
+          </div> -->
+          <div class="form-group fade-in" data-animate="fade-in">
+            <input type="text" id="name" name="name" placeholder="Tên của bạn" required />
+          </div>
+          <div class="form-group fade-in" data-animate="fade-in">
+            <input type="text" id="email" name="email" placeholder="Email (không bắt buộc)" />
+          </div>
+          <div class="form-group confirm">
+            <p class="subtitle" data-animate="fade-in">
+              Bạn sẽ đến chung vui chứ?
+              </p>
+            <div class="button-group" data-animate="fade-in">
+              <div class="radio-wrapper">
+                <input type="radio" id="confirm-yes" name="confirm" value="Yes" checked />
+                <label for="confirm-yes" class="radio-label">
+                  Chắc chắn rồi
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="confirm-no" name="confirm" value="No" />
+                <label for="confirm-no" class="radio-label">
+                  Tiếc quá mình không thể tham dự
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="form-group confirm">
+              <p class="subtitle" data-animate="fade-in">
+                BẠN SẼ ĐÉN CHUNG VUI CHỨ?
+              </p>
+              <div class="button-group" data-animate="fade-in">
+                <div class="radio-wrapper">
+                  <input
+                    type="radio"
+                    id="confirm-yes"
+                    name="confirm"
+                    value="yes"
+                    checked
+                  />
+                  <label for="confirm-yes" class="radio-label">
+                    Chắc chắn rồi
+                  </label>
+                </div>
+                <div class="radio-wrapper">
+                  <input
+                    type="radio"
+                    id="confirm-no"
+                    name="confirm"
+                    value="no"
+                  />
+                  <label for="bride" class="radio-label">
+                    Tiếc quá mình không thể tham dự
+                  </label>
+                </div>
+              </div>
+            </div>
+          -->
+          <!-- <div class="form-group fade-in">
+              <select class="form-select" name="guest_number">
+                <option value="" disabled selected>
+                  Bạn sẽ tham dự cùng bao nhiêu người?
+                </option>
+                <option value="Đi một mình">Đi một mình</option>
+                <option value="1 người">1 người</option>
+                <option value="2 người">2 người</option>
+                <option value="3 người">3 người</option>
+              </select>
+            </div> -->
+
+          <div class="form-group guest-info" data-animate="fade-in">
+            <p class="guest-info-title">
+              Số lượng khách mời tham dự (bao gồm cả bạn nhé)
+            </p>
+            <div class="form-group fade-in">
+              <input
+                type="text"
+                id="guest-info"
+                name="guest_info"
+                placeholder=""
+              />
+            </div>
+          </div>
+
+          <div class="form-group dietary" data-animate="fade-in">
+            <p class="subtext">
+              Để trải nghiệm thêm phần trọn vẹn, <br> 
+              hãy chia sẻ với chúng tôi nếu bạn có bất kỳ lưu ý <br> 
+              đặc biệt nào về ăn uống nhé!
+            </p>
+            <div class="grid-checkbox">
+              <label class="option">
+                <input type="checkbox" id="gluten" name="dietary" value="Dị ứng Gluten" />
+                <span class="label">Dị ứng Gluten</span>
+              </label>
+        
+              <label class="option">
+                <input type="checkbox" id="lactosa" name="dietary" value="Dị ứng Lactosa" />
+                <span class="label">Dị ứng Lactosa</span>
+              </label>
+        
+              <label class="option">
+                <input type="checkbox" id="chay" name="dietary" value="Ăn chay" />
+                <span class="label">Ăn chay</span>
+              </label>
+        
+              <label class="option">
+                <input type="checkbox" id="thuan-chay" name="dietary" value="Ăn thuần chay" />
+                <span class="label">Ăn thuần chay</span>
+              </label>
+        
+              <label class="option">
+                <input type="checkbox" id="hat" name="dietary" value="Dị ứng hạt" />
+                <span class="label">Dị ứng hạt</span>
+              </label>
+        
+              <label class="option">
+                <input type="checkbox" id="hai-san" name="dietary" value="Dị ứng hải sản" />
+                <span class="label">Dị ứng hải sản</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group note" data-animate="fade-in">
+            <input
+              type="text"
+              id="note"
+              name="note"
+              placeholder="Ghi chú cụ thể về dị ứng"
+            />
+          </div>
+
+          <!-- <div class="form-group fade-in">
+              <select class="form-select" name="dietary">
+                <option value="" disabled selected>
+                  Bạn có lưu ý đặc biệt gì về thức ăn không?
+                </option>
+                <option value="Thực đơn thường">Thực đơn thường</option>
+                <option value="Thực đơn chay">Thực đơn chay</option>
+              </select>
+            </div> -->
+          <div class="form-group" data-animate="fade-in" data-animate="fade-in">
+            <div class="wish-label">
+              Bạn có gì muốn nhắn gửi đến cô dâu chú rể không?
+            </div>
+            <textarea id="message" name="wish" placeholder="Gửi lời chúc"></textarea>
+          </div>
+          <button type="submit" class="submit-btn" data-animate="fade-in-end">
+            Xác nhận
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- <section class="faqs">
+      <div class="content" data-animate="fade-in">
+        <div class="title" data-animate="fade-in">Khám phá</div>
+        <div class="faq-container">
+          <div class="faq-item active">
+            <button class="faq-header">
+              <span>Tham quan</span>
+              <span class="icon">−</span>
+            </button>
+            <div class="faq-content">
+              <a href="">Nhà thờ gỗ</a>
+              <a href="">Cầu treo Kon Klor</a>
+              <a href="">Nhà Rông Kon Klor</a>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Ăn sáng, Cà phê</span>
+              <span class="icon">−</span>
+            </button>
+            <div class="faq-content">
+              <a href="">Phở khô Gia Lai</a>
+              <a href="">Quán phở Thìn</a>
+              <a href="">Bún bò Huế cô Bê</a>
+              <a href="">Mì quảng ếch Thịnh</a>
+              <a href="">Cà phê Indochine</a>
+              <a href="">Cà phê The Dé - Trần Phú</a>
+              <a href="">Green Highland Coffee</a>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Ăn vặt, ăn chiều</span>
+              <span class="icon">−</span>
+            </button>
+            <div class="faq-content">
+              <a href="">Bún riêu Yến</a>
+              <a href="">Bánh canh cá lóc AKAY</a>
+              <a href="">Bánh xèo Cô Vân</a>
+              <a href="">Nem nướng Ninh Hoà Hào Trinh</a>
+              <a href="">Gỏi lá Yến Vy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="countdown">
+        <div class="content">
+          <div class="divider">
+            <img class="animate-flip" src="assets/images/divider_flower.png" alt="" />
+          </div>
+          <h2 class="title fade-in">Countdown</h2>
+          <div class="countdown-box fade-in">
+            <div class="time-box">
+              <div class="number" id="days">00</div>
+              <div class="label">Days</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="hours">00</div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="mins">00</div>
+              <div class="label">Mins</div>
+            </div>
+            <div class="time-box">
+              <div class="number" id="secs">00</div>
+              <div class="label">Secs</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+    <section class="end">
+      <div class="content">
+        <div class="top-img">
+          <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/HuangWei-LeHang/074A9591.webp" data-animate="fade-up" alt="Logo" />
+        </div>
+        <!-- <p class="text-main" data-animate="fade-in">
+          Thank you so much for your love and support. We understand that <br> 
+          everyone has a busy schedule — with work, life, and family commitments. <br>
+          It would truly mean the world to us to have you and your loved one <br>
+          share in our special day. We sincerely hope you can join us to witness <br>
+          and celebrate this meaningful milestone together.
+        </p> -->
+
+        <!-- <div class="intro" data-animate="flip-vertical-left">You are cordially invited!</div> -->
+        <!-- <div class="text-end" data-animate="fade-in" data-animate-scroll-start="top 95%">
+          YÊN STUDIO | YÊN BỀ GIA THẤT
+        </div> -->
+      </div>
+    </section>
+
+    <!-- <div class="music-box">
+        <div class="label">
+          <span>Ở đây có </br> nhạc hay</span>
+        </div>
+        <div class="player" id="player-btn" aria-label="Play/Pause">
+          <img id="iconSvg" src="assets/images/cd.png" alt="Music Icon" />
+        </div>
+      </div>
+      <audio
+        id="audio"
+        preload="auto"
+        src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/huy-my/taylor-swift-lover_MKWS27CB.mp3"
+        loop
+        type="audio/mpeg"
+      ></audio> -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="library/js/circletype.min.js"></script>
+  <script src="assets/js/gsap-animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

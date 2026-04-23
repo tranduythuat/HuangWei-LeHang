@@ -1,0 +1,105 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.timeline {
+    width: 100%;
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15%;
+        .title {
+            font-family: $font-ICIEL-RUKOLA;
+            font-size: 32px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 1%;
+        }
+
+        .subtext {
+            letter-spacing: .8px;
+        }
+
+        .items {
+            margin-top: 8%;
+            width: 100%;
+            .item {
+                margin-bottom: 6%;
+                .icon {
+                    @include flex-center;
+                    margin-bottom: 2%;
+                    img {
+                        max-width: 28px;
+                        width: 100%;
+                        height: auto
+                    }
+                }
+                .time {
+                    letter-spacing: 1.5px;
+                    // text-transform: uppercase;
+                    @include flex-center;
+                    .strong {
+                        font-weight: 600;
+                    }
+                }
+
+                &:nth-of-type(2) .icon img {
+                    max-width: 35px;
+                }
+
+                &:nth-of-type(5) .icon img {
+                    // max-width: 34px;
+                }
+            }
+        }
+
+        .box-img {
+            img {
+                max-width: 440px;
+            }
+        }
+
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((32 / 500) * 100vw);
+                letter-spacing: calc((2 / 500) * 100vw);
+            }
+            .subtext {
+                letter-spacing: calc((.8 / 500) * 100vw);
+            }
+            .items {
+                .item {
+                    .icon {
+                        img {
+                            max-width: calc((28 / 500) * 100vw);
+                        }
+                    }
+                    .time {
+                        letter-spacing: calc((1.5 / 500) * 100vw);
+                    }
+    
+                    &:nth-of-type(2) .icon img {
+                        max-width: calc((35 / 500) * 100vw);
+                    }
+
+                    &:nth-of-type(6) .icon img {
+                        // max-width: calc((34 / 500) * 100vw);
+                    }
+                }
+    
+            }
+
+            .box-img {
+                img {
+                    max-width: calc((440 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

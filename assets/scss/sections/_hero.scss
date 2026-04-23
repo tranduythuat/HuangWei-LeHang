@@ -1,0 +1,116 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    width: 100%;
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            margin: 15% 0 2%;
+            font-family: $font-ICIEL-RUKOLA;
+            font-size: 42px;
+            letter-spacing: 4px;
+            line-height: 1;
+            stransform: translateZ(0);
+        }
+
+        .names {
+            font-size: 70px;
+            font-family: $font-MTD-Hangbird;
+            line-height: 1.2;
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin: 10% 0;
+
+            .wife-name {
+
+            }
+            .husband-name {
+                // margin-left: 10%;
+            }
+            .divider {
+                font-family: $font-MTD-Hangbird;
+                font-size: 60px;
+                transform: rotate(-20deg);
+                // max-width: 70px;
+                // width: 100%;
+            }
+        }
+        
+        .welcome {
+            line-height: 1.8;
+            font-size: 15px;
+            p {
+                margin-bottom: 5%;
+                letter-spacing: 1px;
+            }
+        }
+        .banquet_table {
+            margin: 14% 0 8%;
+            img {
+                max-width: 364px;
+            }
+        }
+        .note {
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+        .downward_arrow {
+            margin-top: 2%;
+            img {
+                max-width: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .logo {
+                img {
+                    max-width: calc((94 / 500) * 100vw);
+                }
+            }
+
+            .title {
+                font-size: calc((42 / 500) * 100vw);
+                letter-spacing:  calc((6 / 500) * 100vw);
+            }
+            
+            .welcome {
+                font-size: calc((15 / 500) * 100vw);
+                p {
+                    letter-spacing: calc((1 / 500) * 100vw);
+                }
+            }
+            .names {
+                font-size: calc((70 / 500) * 100vw);
+                max-width: calc((400 / 500) * 100vw);
+                .divider {
+                    // max-width: calc((70 / 500) * 100vw);
+                    font-size: calc((60 / 500) * 100vw);
+                }
+            }
+            .banquet_table {
+                img {
+                    max-width: calc((364 / 500) * 100vw);
+                }
+            }
+            .note {
+                letter-spacing: calc((1 / 500) * 100vw);
+            }
+            
+            .downward_arrow {
+                img {
+                    max-width: calc((20 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

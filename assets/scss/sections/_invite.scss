@@ -1,0 +1,130 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite {
+    width: 100%;
+    .content {
+        width: 100%;
+        padding-top: 10%;
+        .title {
+            font-size: 22px;
+            font-family: $font-ICIEL-RUKOLA;
+            line-height: 1.5;
+            letter-spacing: 2px;
+        }
+
+        .sub_text {
+            letter-spacing: 1.2px;
+            margin-top: 1%;
+        }
+
+        .divider-time {
+            margin: 8% auto 3%;
+            max-width: 42px;
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #dddcd9;
+            @include flex-center;
+            border-radius: 50%;
+            img {
+                max-width: 20px;
+            }
+        }
+
+        .time_label {
+            margin-bottom: 3%;
+            letter-spacing: 1.5px;
+        }
+
+        .hours, .time {
+            letter-spacing: 1.5px;
+        }
+
+        .divider {
+            margin: 8% 0 3%;
+            img {
+                max-width: 42px;
+            }
+        }
+        .location_label{
+            // text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .name {
+            margin: 3% 0 1%;
+            // text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 28px;
+        }
+
+        .map_btn {
+            margin-top: 2%;
+            img {
+                max-width: 172px;
+            }
+        }
+
+        .map_art {
+            perspective: 1000px;
+            margin-top: 10%;
+            img {
+                max-width: 372px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((22 / 500) * 100vw);
+                letter-spacing: calc((2 / 500) * 100vw);
+            }
+
+            .sub_text {
+                letter-spacing: calc((1.2 / 500) * 100vw);
+            }
+
+            .divider-time {
+                max-width: calc((42 / 500) * 100vw);
+                img {
+                    max-width: calc((20 / 500) * 100vw);
+                }
+            }
+    
+            .time_label {
+                letter-spacing: calc((1.5 / 500) * 100vw);
+            }
+    
+            .hours, .time {
+                letter-spacing: calc((1.5 / 500) * 100vw);
+            }
+
+            .divider {
+                img {
+                    max-width: calc((42 / 500) * 100vw);
+                }
+            }
+
+            .location_label,  .name {
+                letter-spacing: calc((1.5 / 500) * 100vw);
+            }
+
+            .name {
+                font-size: calc((28 / 500) * 100vw);
+            }
+    
+            .map_btn {
+                img {
+                    max-width: calc((172 / 500) * 100vw);
+                }
+            }
+    
+            .map_art {
+                img {
+                    max-width: calc((372 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}
