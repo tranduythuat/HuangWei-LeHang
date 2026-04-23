@@ -12,8 +12,9 @@
             font-size: 42px;
             font-family: $font-ICIEL-RUKOLA;
             font-weight: 300;
-            margin-bottom: 5%;
+            // margin-bottom: 2%;
             letter-spacing: 2px;
+            line-height: 1.3;
         }
 
         .subtext {
@@ -28,7 +29,7 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
-            width: 50%;
+            width: 42%;
             margin-top: 2%;
             .item {
                 flex: 1;
