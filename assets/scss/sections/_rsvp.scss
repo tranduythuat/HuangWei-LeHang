@@ -46,7 +46,7 @@
 
                 .radio-wrapper {
                     position: relative;
-                    height: 32px;
+                    height: 44px;
                 }
 
                 .radio-wrapper input[type="radio"] {
@@ -60,9 +60,8 @@
                     font-size: 13.3px;
                     // text-transform: uppercase;
                     font-family: inherit;
-                    // padding: 4% 0;
                     height: 100%;
-                    line-height: 1;
+                    line-height: 1.2;
                     border-radius: 6px;
                     background: #fff;
                     cursor: pointer;
@@ -184,7 +183,7 @@
             }
 
             .form-group.note {
-                margin: 4% 0 8%;
+                margin: 7% 0 8%;
             }
 
             .form-group.dietary {
@@ -243,6 +242,7 @@
 
                         .label {
                             // text-transform: uppercase;
+                            text-align: left;
                         }
                     }
                 }
@@ -304,7 +304,7 @@
             .rsvp-form {
                 .button-group {
                     .radio-wrapper {
-                        height: calc((32 / 500) * 100vw);
+                        height: calc((44 / 500) * 100vw);
                     }
 
                     .radio-label {
