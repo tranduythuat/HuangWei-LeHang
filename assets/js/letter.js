@@ -155,53 +155,152 @@
   }
 
   function initSwitchLanguage() {
-    const letter = qs("#letter");
-  
-    letter.addEventListener("click", (e) => {
-      e.preventDefault();
-  
+    if (typeof Swal === "undefined") return;
+
+    const currentFile = window.location.pathname.split("/").pop() || "";
+
+    const STORAGE_KEY = "wedding_lang";
+    const langFiles = {
+      vi: "thiepmoivi.html",
+      zh: "thiepmoizh.html",
+    };
+    const langLabels = {
+      vi: "Tiếng Việt",
+      zh: "简体中文",
+    };
+
+    const getLangFromCurrentFile = () => {
+      return Object.keys(langFiles).find((lang) => langFiles[lang] === currentFile) || "";
+    };
+
+    const getCurrentLanguage = () => {
+      const fileLang = getLangFromCurrentFile();
+      if (fileLang) return fileLang;
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY) || "";
+        if (saved && langFiles[saved]) return saved;
+      } catch (error) {
+        console.warn("Cannot read language preference:", error);
+      }
+      return "";
+    };
+
+    const goToLanguageFile = (lang) => {
+      const fileName = langFiles[lang];
+      if (!fileName) return;
+
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+      } catch (error) {
+        console.warn("Cannot save language preference:", error);
+      }
+
+      const switchButton = document.getElementById("switch-language-btn");
+      if (switchButton && langLabels[lang]) {
+        switchButton.textContent = langLabels[lang];
+      }
+
+      if (currentFile === fileName) {
+        Swal.close();
+        return;
+      }
+      window.location.href = fileName;
+    };
+
+    const openLanguageModal = () => {
       Swal.fire({
         showConfirmButton: false,
         showCancelButton: false,
         showDenyButton: false,
         showCloseButton: false,
-  
+        allowOutsideClick: false,
+        allowEscapeKey: false,
         showClass: {
           popup: "animate__animated animate__fadeInDown animate__faster"
         },
-        
         background: "#f8f6f2",
         backdrop: "rgba(0,0,0,0.4)",
-  
         customClass: {
           popup: "wedding-lang-popup"
         },
-  
         didOpen: () => {
           const container = Swal.getHtmlContainer();
-  
+          if (!container) return;
+
           container.insertAdjacentHTML(
             "beforeend",
             `
             <div class="btn-group">
-              <button id="btnVi" class="lang-btn">Tiếng việt</button>
-              <button id="btnEn" class="lang-btn">English</button>
+              <button id="btnZh" class="lang-btn">简体中文</button>
+              <button id="btnVi" class="lang-btn">Tiếng Việt</button>
             </div>
             `
           );
-  
-          document.getElementById("btnVi").onclick = () => {
-            Swal.close();
-            window.location.href = "invitationvi.html";
-          };
-  
-          document.getElementById("btnEn").onclick = () => {
-            Swal.close();
-            window.location.href = "invitationen.html";
-          };
+
+          const btnVi = document.getElementById("btnVi");
+          const btnZg = document.getElementById("btnZh");
+
+          if (btnZg) btnZg.onclick = () => goToLanguageFile("zh");
+          if (btnVi) btnVi.onclick = () => goToLanguageFile("vi");
         }
       });
-    });
+    };
+
+    const ensureLanguageButton = () => {
+      const existed = document.getElementById("switch-language-btn");
+      if (existed) return;
+
+      const styleId = "switch-language-btn-style";
+      if (!document.getElementById(styleId)) {
+        const style = document.createElement("style");
+        style.id = styleId;
+        style.textContent = `
+          #switch-language-btn {
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            z-index: 10000;
+            border: 1px solid rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.92);
+            color: #202020;
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 13px;
+            line-height: 1;
+            cursor: pointer;
+            font-family: 'Lora', sans-serif;;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      const button = document.createElement("button");
+      button.id = "switch-language-btn";
+      button.type = "button";
+      const currentLang = getCurrentLanguage();
+      button.textContent = langLabels[currentLang] || "简体中文";
+      button.setAttribute("aria-label", "Switch language");
+      button.addEventListener("click", openLanguageModal);
+      document.body.appendChild(button);
+    };
+
+    ensureLanguageButton();
+
+    let savedLang = "";
+    try {
+      savedLang = localStorage.getItem(STORAGE_KEY) || "";
+    } catch (error) {
+      console.warn("Cannot read language preference:", error);
+    }
+
+    if (savedLang && langFiles[savedLang]) {
+      if (currentFile !== langFiles[savedLang]) {
+        window.location.href = langFiles[savedLang];
+      }
+      return;
+    }
+    openLanguageModal();
   }
 
   function initAnimations() {
@@ -257,7 +356,7 @@
   function init() {
     gsap.registerPlugin(ScrollTrigger);
     initAnimations();
-    // initSwitchLanguage();
+    initSwitchLanguage();
     initTimeline();
   }
 
