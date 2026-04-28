@@ -675,19 +675,13 @@
 
   function initCircleText() {
     const textNgaychungdoi = new CircleType(document.getElementById('ngaychungdoi'));
-    const textNgaychungdoi1 = new CircleType(document.getElementById('ngaychungdoi1'));
     textNgaychungdoi.radius(480);
-    textNgaychungdoi1.radius(480);
 
     const textInviteCountdown1 = new CircleType(document.getElementById('invite_countdown_text_1'));
-    const textInviteCountdown2 = new CircleType(document.getElementById('invite_countdown_text_2'));
     textInviteCountdown1.radius(880)
+
+    const textInviteCountdown2 = new CircleType(document.getElementById('invite_countdown_text_2'));
     textInviteCountdown2.radius(880)
-    
-    const textInviteCountdown01 = new CircleType(document.getElementById('invite_countdown_text_01'));
-    const textInviteCountdown02 = new CircleType(document.getElementById('invite_countdown_text_02'));
-    textInviteCountdown01.radius(880)
-    textInviteCountdown02.radius(880)
   }
 
   function initTimelineContent() {

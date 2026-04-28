@@ -294,18 +294,13 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.hero .content .title, .hero .content .title1 {
+.hero .content .title {
+  margin: 15% 0 2%;
   font-family: "ICIEL-RUKOLA", sans-serif;
   font-size: 42px;
   letter-spacing: 4px;
   line-height: 1;
   stransform: translateZ(0);
-}
-.hero .content .title {
-  margin: 15% 0 2%;
-}
-.hero .content .title1 {
-  margin-top: -5%;
 }
 .hero .content .names {
   font-size: 70px;
@@ -525,7 +520,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .timeline .content .items .item .time .strong {
   font-weight: 600;
@@ -800,7 +794,7 @@ header {
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper {
   position: relative;
-  height: 44px;
+  height: 32px;
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio] {
   position: absolute;
@@ -814,7 +808,7 @@ header {
   font-size: 13.3px;
   font-family: inherit;
   height: 100%;
-  line-height: 1.2;
+  line-height: 1;
   border-radius: 6px;
   background: #fff;
   cursor: pointer;
@@ -908,7 +902,7 @@ header {
   margin-bottom: 8%;
 }
 .rsvp .content .rsvp-form .form-group.note {
-  margin: 7% 0 8%;
+  margin: 4% 0 8%;
 }
 .rsvp .content .rsvp-form .form-group.dietary .subtext {
   letter-spacing: 0.8px;
@@ -958,9 +952,6 @@ header {
 .rsvp .content .rsvp-form .form-group.dietary .grid-checkbox .option input[type=checkbox]:hover:not(:checked) {
   background-color: rgba(28, 88, 177, 0.5882352941);
 }
-.rsvp .content .rsvp-form .form-group.dietary .grid-checkbox .option .label {
-  text-align: left;
-}
 .rsvp .content .rsvp-form .submit-btn {
   font-family: "Lora", sans-serif;
   width: 33%;
@@ -1002,7 +993,7 @@ header {
     letter-spacing: 0.16vw;
   }
   .rsvp .content .rsvp-form .button-group .radio-wrapper {
-    height: 8.8vw;
+    height: 6.4vw;
   }
   .rsvp .content .rsvp-form .button-group .radio-label {
     font-size: 2.66vw;
@@ -1081,15 +1072,8 @@ header {
   letter-spacing: 1px;
   font-weight: 500;
 }
-.countdown .content .invite_text_1 {
-  margin: 25% 0 2%;
-  font-family: "ICIEL-RUKOLA", sans-serif;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: 2px;
-}
 .countdown .content .invite_text {
-  margin-bottom: 8%;
+  margin: 25% 0 8%;
   font-family: "ICIEL-RUKOLA", sans-serif;
   font-size: 24px;
   line-height: 1;
@@ -1113,7 +1097,7 @@ header {
     font-size: 2.1vw;
     letter-spacing: 0.2vw;
   }
-  .countdown .content .invite_text, .countdown .content .invite_text_1 {
+  .countdown .content .invite_text {
     font-size: 4.8vw;
     letter-spacing: 0.4vw;
   }
@@ -1179,7 +1163,7 @@ header {
 .letter-section .content .welcome {
   font-family: "MTD-Hangbird", sans-serif;
   font-size: 22px;
-  margin-bottom: 4%;
+  margin-bottom: 16%;
   text-align: center;
 }
 .letter-section .content .flap {
