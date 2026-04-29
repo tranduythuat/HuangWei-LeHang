@@ -527,18 +527,17 @@
         successText:
           "Cảm ơn bạn đã xác nhận. Thông tin đã được chuyển đến cô dâu và chú rể rồi nha.",
         errorTitle: "Lỗi!",
-        errorServer: "OPPS! Không tìm thấy server",
+        errorServer: "OPPS! Đã có lỗi xảy ra, vui lòng thử lại sau",
         errorRetry: "Thử lại",
       },
-      en: {
-        sendingTitle: "Sending...",
-        sendingText: "Please wait a moment",
-        successTitle: "Success!",
-        successText:
-          "Thank you for your confirmation. Your information has been forwarded to the bride and groom.",
-        errorTitle: "Error!",
-        errorServer: "OPPS! Server not found",
-        errorRetry: "Try again",
+      zh: {
+        sendingTitle: "正在发送...",
+        sendingText: "请稍候片刻",
+        successTitle: "提交成功！",
+        successText: "感谢您的确认。您的回复已发送给新郎和新娘。",
+        errorTitle: "错误！",
+        errorServer: "哎呀！发生了一些错误，请稍后再试。",
+        errorRetry: "重试",
       },
     };
 
@@ -556,14 +555,14 @@
     });
 
     const SHEET_ENDPOINTS = {
-      // vow: "https://script.google.com/macros/s/AKfycbype9If_6ntWvFG4hg0uGGS6vq-1QV1YHhmQaLX_MFVVGqXQH9m9wlJLzIpTH3FNiWoYQ/exec?sheet=vow",
+      confirm: "https://script.google.com/macros/s/AKfycbyddFNI2MXsIcEhTbmr-mPORSayl1lKaeYjAwxLg01Am1sxJHMmVFvQ_2fmp-Gb41NJ/exec/exec?sheet=confirm",
       // not_vow: "https://script.google.com/macros/s/AKfycbype9If_6ntWvFG4hg0uGGS6vq-1QV1YHhmQaLX_MFVVGqXQH9m9wlJLzIpTH3FNiWoYQ/exec?sheet=not-vow",
     };
 
-    let sheetURL = SHEET_ENDPOINTS.vow;
-    if (timeline === "v2") {
-      sheetURL = SHEET_ENDPOINTS.not_vow
-    }
+    let sheetURL = SHEET_ENDPOINTS.confirm;
+    // if (timeline === "v2") {
+    //   sheetURL = SHEET_ENDPOINTS.not_vow
+    // }
 
     try {
       const res = await fetch(sheetURL, {
@@ -621,9 +620,14 @@
   }
 
   function initRSVP() {
-    const form = document.forms["rsvpForm"];
-    if (form) {
-      form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
+    const formVi = document.forms["rsvpForm-vi"];
+    const formZh = document.forms["rsvpForm-zh"];
+    if (formVi) {
+      formVi.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
+    }
+
+    if (formZh) {
+      formZh.addEventListener("submit", (e) => handleFormSubmit(e, "zh"));
     }
   }
 
